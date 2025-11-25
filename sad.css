@@ -1,0 +1,49 @@
+body{
+    background-color: #dbf5e6;
+    font-family: 'Shadows Into Light', cursive;
+}
+
+.mainbubble {
+    text-align: center;
+    background-color: #A6F0C6;
+    border-radius: 25px;
+    max-width: 50%;
+    margin: 50px auto;
+    padding: 20px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+    background: #ffffff88;
+}
+
+.gif-container img {
+    width: 100%;
+    max-width: 250px; 
+    height: auto;
+    margin-bottom: 20px;
+}
+
+.buttons button {
+    font-family: 'Shadows Into Light', cursive;
+    background-color: #FFF9F2;
+    color: #166345;
+    border: 3px solid #79d8a5;
+    padding: 10px 25px;
+    font-size: 22px;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: 0.2s ease;
+    box-shadow: 0px 3px 8px rgba(0, 0, 0, 0.1);
+    width: auto;
+    min-width: 120px;
+}
+
+/* Hover bounce */
+.buttons button:hover {
+    transform: scale(1.08);
+    background-color: #8EE7B7;;
+}
+
+/* Click bounce press */
+.buttons button:active {
+    transform: scale(0.93);
+    box-shadow: 0 2px 0 #8EE7B7;
+}
