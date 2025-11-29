@@ -1,0 +1,54 @@
+body {
+  font-family: 'Shadows Into Light', cursive;
+  font-size: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background-color: #f9f5f2;
+}
+
+.container {
+  text-align: center;
+}
+
+.scratch-container {
+  position: relative;
+  display: inline-block;
+  margin-top: 20px;
+}
+
+.qr-code {
+  width: 250px;
+  height: 250px;
+  display: block;
+}
+
+#scratchCanvas {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 250px;
+  height: 250px;
+  background-color: white;
+  cursor: pointer;
+}
+.back-button {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 20px;
+    font-size: 18px;
+    background-color: #FFF9F2;
+    color: #38433f;
+    cursor: pointer;
+    box-shadow: 0 3px 8px rgba(0,0,0,0.2);
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.back-button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 12px rgba(0,0,0,0.3);
+}

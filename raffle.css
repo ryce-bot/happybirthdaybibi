@@ -1,0 +1,84 @@
+body{
+    background-color: #f9f4ef;
+    font-family: 'Shadows Into Light', cursive;
+  
+}
+.raffle-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 50px;
+  }
+  
+  /* Make parent relative so ticket positions correctly */
+  .raffle-box {
+    position: relative;
+    display: inline-block;
+  }
+  
+  /* BOX */
+  .box-img {
+    width: 200px;
+    animation: shake 1.5s ease-in-out infinite;
+    cursor: pointer;
+  }
+  
+  /* SHAKE ANIMATION */
+  @keyframes shake {
+    0% { transform: rotate(0deg); }
+    30% { transform: rotate(-2deg); }
+    60% { transform: rotate(2deg); }
+    100% { transform: rotate(0deg); }
+  }
+  
+  /* TICKET */
+ /* Ticket full screen style */
+ .ticket {
+    position: fixed;      /* covers entire screen */
+    top: 50%;
+    left: 50%;
+    width: 160px;         /* starting size */
+    transform: translate(-50%, -50%) scale(0.3);  /* start small */
+    opacity: 0;
+    transition: all 0.7s ease-in-out;
+    pointer-events: none;
+    z-index: 50;          /* above box */
+    object-fit: contain;   /* important for images */
+  }
+  
+  /* When revealed, fill screen proportionally */
+  .ticket.revealed {
+    width: 90vw;           /* max width */
+    height: 90vh;          /* max height */
+    max-width: 100%;       /* never exceed screen width */
+    max-height: 100%;      /* never exceed screen height */
+    transform: translate(-50%, -50%) scale(1);
+    opacity: 1;
+  }
+  
+  
+  .tap-text {
+    margin-top: 20px;
+    font-size: 22px;
+    font-family: 'Shadows Into Light', cursive;
+    color: #333;
+  }
+  .back-button {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 20px;
+    font-size: 18px;
+    background-color: #FFF9F2;
+    color: #38433f;
+    cursor: pointer;
+    box-shadow: 0 3px 8px rgba(0,0,0,0.2);
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.back-button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 12px rgba(0,0,0,0.3);
+}

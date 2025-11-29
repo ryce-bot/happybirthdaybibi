@@ -1,0 +1,155 @@
+body{
+    background-color: #dbf5e6;
+    font-family: 'Shadows Into Light', cursive;
+}
+
+.buttons {
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+    flex-wrap: wrap;
+    margin-top: 20px;
+  }
+  .text{
+    font-family: 'Shadows Into Light', cursive;
+    font-size: 20px;
+    text-align: center;
+    margin-top: 100px;
+    margin-bottom: 90px;
+  }
+
+.buttons button {
+    font-family: 'Shadows Into Light', cursive;
+    font-size: 22px;
+    background-color: #FFF9F2;
+    border-radius: 30px;
+    cursor: pointer;
+    padding: 15px 30px;       /* big on desktop */
+    flex: 1 1 150px;          /* flexible: grow, shrink, base width */
+    max-width: 200px;         /* prevent too big on large screens */
+    min-width: 120px;         /* ensure readable on small screens */
+    height: 200px;             /* consistent height */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex: 1 1 150px;  /* grow/shrink, minimum 150px */
+    aspect-ratio: 1;
+    transition: transform 0.25s ease, box-shadow 0.25s ease, background-color 0.25s ease;
+}
+.buttons button:hover {
+    color: #FFF9F2;
+    transform: translateY(-3px);
+  }
+  .buttons button img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    transition: transform 0.25s ease; /* smooth scaling */
+    background-color: #FFF9F2;
+  }
+  
+  /* Mobile: stack vertically */
+  @media (max-width: 480px) {
+    .buttons {
+      flex-direction: column;
+      align-items: center;
+      gap: 10px; 
+      margin-top: -70px;
+    }
+    
+    .buttons button {
+      width: 70%; 
+      max-width: 200px;
+    }
+    h1{
+        font-size: 28px;
+        width:300px;
+        margin-left: 50px;
+        margin-top:-10px;
+    }
+    
+  }
+  
+
+
+#flowers {
+    border: none;
+    background: none;
+    cursor: pointer;
+    padding: 0;
+  }
+  
+  /* Make the image responsive */
+  #sweets img {
+    width: 50vw;        /* takes 50% of screen width */
+    max-width: 180px;   /* never get too big on desktop */
+    min-width: 120px;   /* don’t get tiny on small phones */
+    border-radius: 20px;
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+    box-shadow: 0px 3px 8px rgba(0,0,0,0.12);
+  }
+  
+  /* Hover bounce effect (works on desktop/tablet) */
+  #sweets:hover img {
+    transform: scale(1.1);
+    box-shadow: 0px 6px 14px rgba(0,0,0,0.18);
+  }
+
+  #sweets {
+    border: none;
+    background: none;
+    cursor: pointer;
+    padding: 0;
+  }
+  
+  /* Make the image responsive */
+  #flowers img {
+    width: 50vw;        /* takes 50% of screen width */
+    max-width: 180px;   /* never get too big on desktop */
+    min-width: 120px;   /* don’t get tiny on small phones */
+    border-radius: 20px;
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+    box-shadow: 0px 3px 8px rgba(0,0,0,0.12);
+  }
+  
+  /* Hover bounce effect (works on desktop/tablet) */
+  #flowers:hover img {
+    transform: scale(1.1);
+    box-shadow: 0px 6px 14px rgba(0,0,0,0.18);
+  }
+    #message {
+        border: none;
+        background: none;
+        cursor: pointer;
+        padding: 0;
+    }
+    /* Make the image responsive */
+    #message img {
+      width: 50vw;        /* takes 50% of screen width */
+      max-width: 180px;   /* never get too big on desktop */
+      min-width: 120px;   /* don’t get tiny on small phones */
+      border-radius: 20px;
+      transition: transform 0.25s ease, box-shadow 0.25s ease;
+      box-shadow: 0px 3px 8px rgba(0,0,0,0.12);
+    }
+    /* Hover bounce effect (works on desktop/tablet) */
+    #message:hover img {
+      transform: scale(1.1);
+      box-shadow: 0px 6px 14px rgba(0,0,0,0.18);
+    }
+  
+  /* Mobile-friendly: High-tap target */
+  @media (max-width: 600px) {
+    #flowers img {
+      width: 65vw;     /* a bit bigger for finger tapping */
+      max-width: 200px;
+    }
+   #sweets img {
+    width: 65vw;     /* a bit bigger for finger tapping */
+    max-width: 200px;
+  }
+  #message img {
+    width: 65vw;     /* a bit bigger for finger tapping */
+    max-width: 200px;
+  }
+}

@@ -1,0 +1,73 @@
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Shadows Into Light', cursive;
+    background-color: #f9f5f2;
+    overflow-x: hidden; /* prevent horizontal scroll */
+}
+
+/* Fixed side borders */
+.border {
+    position: fixed;
+    top: 0;
+    width: 350px;              /* width of border */
+    height: 100vh;             /* full viewport height */
+    background-repeat: repeat-y;
+    background-size: auto 100%; /* fit vertically */
+    z-index: 999;              /* on top */
+    pointer-events: none;      /* don't block clicks */
+}
+
+.left-border {
+    left: 0;
+    background-image: url("https://raw.githubusercontent.com/ryce-bot/happybirthdaybibi/refs/heads/main/left.png");
+}
+
+.right-border {
+    right: 0;
+    background-image: url("https://raw.githubusercontent.com/ryce-bot/happybirthdaybibi/refs/heads/main/right.png");
+    margin-right: -120px;
+}
+
+
+/* Scrollable, responsive content */
+.content {
+    max-width: calc(100% - 700px); /* subtract both borders (350px each + 20px padding) */
+    margin: 0 auto;
+    padding: 50px 20px;
+    position: relative;
+    z-index: 1;
+}
+
+.content p {
+    font-size: 40px;
+    line-height: 1.8;
+    margin-bottom: 30px;
+}
+
+
+@media (max-width: 480px) {
+    .content p {
+        font-size: 20px;
+        width: 200px;
+    }
+    .border {
+        width: 200px; /* narrower borders on small screens */
+    }
+    .left-border {
+        margin-left: -120px;
+    }
+    .right-border {
+        margin-right: -140px;
+    }
+    .content {
+        max-width: 50px;
+        margin-left: 100px;
+    }
+
+}
